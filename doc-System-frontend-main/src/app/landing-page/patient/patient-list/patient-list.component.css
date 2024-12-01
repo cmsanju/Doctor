@@ -1,0 +1,75 @@
+.heading{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .myBtn{
+    height: 100%;
+    padding: 10px 10px;
+  }
+  
+  .UserList{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: max(3%,10px);
+    flex-wrap: wrap;
+  }
+  
+  .userCard{
+    flex-basis: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+  }
+  
+  .textOver{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .userCard:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    transform:translateY(-2px);
+    transition: 2s ease 0;
+  }
+  
+  .optionsL{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap:15px;
+    margin-top: 15px;
+  }
+  
+  .cLink{
+    color: #0d6efd;
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+  
+  .cLink:hover{
+    text-decoration: underline;
+  }
+  
+  .docInfo{
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  hr{
+    margin: 7px;
+  }
+  
+  .iconColor{
+    color: #6395ec;
+    font-size: 18px;
+    margin-right:10px;
+  }

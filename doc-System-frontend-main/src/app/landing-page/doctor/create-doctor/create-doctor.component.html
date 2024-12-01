@@ -1,0 +1,148 @@
+<div class="col-md-6 offset-md-3" style="margin-bottom: 100px;">
+  <h3 class="text-center">Create Doctor</h3>
+  <form #doctorForm="ngForm" (ngSubmit)="saveUser()">
+    <!-- <div class="form-group">
+      <label>Doctor Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="doctorId"
+        [(ngModel)]="doctor.doctorId"
+        name="doctorId"
+        required
+        #doctorId="ngModel"
+        [class.is-invalid]="doctorId.invalid && doctorId.touched"
+      />
+      <small class="text-danger" *ngIf="doctorId.invalid && doctorId.touched">
+        Doctor Id is required
+      </small>
+    </div> -->
+
+    <div class="form-group">
+      <label>Doctor Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="doctorName"
+        [(ngModel)]="doctor.doctorName"
+        name="doctorName"
+        required
+        #doctorName="ngModel"
+        [class.is-invalid]="doctorName.invalid && doctorName.touched"
+      />
+      <small class="text-danger" *ngIf="doctorName.invalid && doctorName.touched">
+        Doctor Name is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Speciality</label>
+      <input
+        type="text"
+        class="form-control"
+        id="speciality"
+        [(ngModel)]="doctor.speciality"
+        name="speciality"
+        required
+        #speciality="ngModel"
+        [class.is-invalid]="speciality.invalid && speciality.touched"
+      />
+      <small class="text-danger" *ngIf="speciality.invalid && speciality.touched">
+        Speciality is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Location</label>
+      <input
+        type="text"
+        class="form-control"
+        id="location"
+        [(ngModel)]="doctor.location"
+        name="location"
+        required
+        #location="ngModel"
+        [class.is-invalid]="location.invalid && location.touched"
+      />
+      <small class="text-danger" *ngIf="location.invalid && location.touched">
+        Location is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Hospital Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="hospitalName"
+        [(ngModel)]="doctor.hospitalName"
+        name="hospitalName"
+        required
+        #hospitalName="ngModel"
+        [class.is-invalid]="hospitalName.invalid && hospitalName.touched"
+      />
+      <small class="text-danger" *ngIf="hospitalName.invalid && hospitalName.touched">
+        Hospital Name is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Mobile No</label>
+      <input
+        type="text"
+        class="form-control"
+        id="mobileNo"
+        [(ngModel)]="doctor.mobileNo"
+        name="mobileNo"
+        required
+        pattern="^[0-9]{10}$"
+        #mobileNo="ngModel"
+        [class.is-invalid]="mobileNo.invalid && mobileNo.touched"
+      />
+      <small class="text-danger" *ngIf="mobileNo.invalid && mobileNo.touched">
+        Mobile No is required and must be 10 digits
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        [(ngModel)]="doctor.email"
+        name="email"
+        required
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <small class="text-danger" *ngIf="email.invalid && email.touched">
+        A valid Email is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        [(ngModel)]="doctor.password"
+        name="password"
+        required
+        minlength="8"
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small class="text-danger" *ngIf="password.invalid && password.touched">
+        Password is required and must be at least 8 characters long
+      </small>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-success" type="submit" [disabled]="doctorForm.invalid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,88 @@
+<div class="col-md-6 offset-md-3" style="margin-bottom: 100px;">
+  <h3 class="text-center">Update Availability Date</h3>
+  <form #availabilityDateForm="ngForm" (ngSubmit)="saveAvailitydate()">
+
+    <!-- Available Date Id -->
+    <!-- <div class="form-group">
+      <label>Available Date Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="availabilityId"
+        [(ngModel)]="availabledate.availabilityId"
+        name="availabilityId"
+        required
+        #availabilityId="ngModel"
+        [class.is-invalid]="availabilityId.invalid && availabilityId.touched"
+      />
+      <small class="text-danger" *ngIf="availabilityId.invalid && availabilityId.touched">
+        Available Date Id is required.
+      </small>
+    </div> -->
+
+    <!-- Doctor Id -->
+    <div class="form-group">
+      <label>Doctor Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="doctorId"
+        [(ngModel)]="availabledate.doctor.doctorId"
+        name="doctorId"
+        required
+        #doctorId="ngModel"
+        [class.is-invalid]="doctorId.invalid && doctorId.touched"
+      />
+      <small class="text-danger" *ngIf="doctorId.invalid && doctorId.touched">
+        Doctor Id is required.
+      </small>
+    </div>
+
+    <!-- Appointment From Date -->
+    <div class="form-group">
+      <label>Appointment From Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fromDate"
+        [(ngModel)]="availabledate.fromDate"
+        name="fromDate"
+        required
+        #fromDate="ngModel"
+        [class.is-invalid]="fromDate.invalid && fromDate.touched"
+      />
+      <small class="text-danger" *ngIf="fromDate.invalid && fromDate.touched">
+        Appointment From Date is required.
+      </small>
+    </div>
+
+    <!-- Appointment End Date -->
+    <div class="form-group">
+      <label>Appointment End Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="endDate"
+        [(ngModel)]="availabledate.endDate"
+        name="endDate"
+        required
+        #endDate="ngModel"
+        [class.is-invalid]="endDate.invalid && endDate.touched"
+      />
+      <small class="text-danger" *ngIf="endDate.invalid && endDate.touched">
+        Appointment End Date is required.
+      </small>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="availabilityDateForm.invalid"
+      >
+        Update
+      </button>
+    </div>
+  </form>
+</div>

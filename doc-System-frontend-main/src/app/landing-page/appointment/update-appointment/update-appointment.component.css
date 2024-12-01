@@ -1,0 +1,93 @@
+/* Container Styling for Form */
+.col-md-6 {
+    margin-bottom: 100px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  /* Form Title Styling */
+  h3.text-center {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label Styling */
+  label {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Input Field Styling */
+  input.form-control {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus Effect for Input Fields */
+  input.form-control:focus {
+    border-color: #17a2b8;
+    box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);
+  }
+  
+  /* Submit Button Styling */
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #21749e;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Submit Button Hover Effect */
+  button[type="submit"]:hover {
+    background-color: #113191;
+  }
+  
+  /* Centering the Submit Button */
+  .text-center {
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 767px) {
+    .col-md-6 {
+      margin-bottom: 50px;
+      padding: 20px;
+    }
+  
+    h3.text-center {
+      font-size: 1.8rem;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    button[type="submit"] {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  }
+  

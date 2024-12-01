@@ -1,0 +1,94 @@
+<div class="body">
+  <nav #sidebar class="sidebar">
+      <header>
+          <div class="image-text">
+              <span class="image">
+                  <img src="../../assets/Logo.png" alt="">
+              </span>
+
+              <div class="text logo-text">
+                  <span class="name">MediTalk</span>
+              </div>
+          </div>
+          <i #toggle class="bi bi-arrow-left-short toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+          <div class="menu">
+              <ul class="menu-links">
+                  <li class="nav-link">
+                      <a routerLink="/landing-page/user-list" routerLinkActive="active">
+                          <i class="bi bi-house-door icon"></i>
+                          <span class="text nav-text">Dashboard</span>
+                      </a>
+                  </li>
+
+                  
+                  <li class="nav-link">
+                      <a routerLink="/landing-page/doctor-list" routerLinkActive="active">
+                          <i class="bi bi-hospital icon"></i>
+                          <span class="text nav-text">Find Doctor</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link" *ngIf="ispatient || isadmin">
+                      <a routerLink="/landing-page/patient-list" routerLinkActive="active">
+                            <i class="bi bi-clipboard2-pulse icon"></i>
+                          <span class="text nav-text">Patients</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                    <a routerLink="/landing-page/appointment-list" routerLinkActive="active">
+                        <i class="bi bi-person-vcard icon"></i>
+                        <span class="text nav-text">Appointments</span>
+                    </a>
+                </li>
+
+                <li class="nav-link" >
+                  <a routerLink="/landing-page/availabilitydates-list" routerLinkActive="active">
+                        <i class="bi bi-calendar2-check icon"></i>
+                      <span class="text nav-text">Availability Details</span>
+                  </a>
+              </li>
+
+              <li class="nav-link">
+                <a routerLink="/landing-page/feedback-list" routerLinkActive="active">
+                    <i class="bi bi-award icon"></i>
+                    <span class="text nav-text">Feedbacks</span>
+                </a>
+              </li>
+
+              </ul>
+          </div>
+
+          <div class="bottom-content">
+              <li class="logout">
+                  <a href="#" (click)="logout()">
+                      <i class="bi bi-box-arrow-left icon"></i>
+                      <span class="text nav-text">Logout</span>
+                  </a>
+              </li>                
+          </div>
+      </div>
+  </nav>
+
+  <section class="home">
+    <nav class="headerNav row">
+        <a routerLink="profile" class="profileDrop">
+            <div class="userImage">
+                <img *ngIf="isdoctor" src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" class="userImage">
+                <img *ngIf="ispatient" src="https://i.pinimg.com/736x/a4/8a/ca/a48aca275e3dbe9a00d8f90e095f25ae.jpg" class="userImage">
+                <img *ngIf="isadmin" src="https://i.pinimg.com/736x/be/61/38/be6138527adcaf0bc42d6bd0339b25b0.jpg" class="userImage">
+            </div>
+            <p>{{Role}}</p>
+
+            <!-- <i class="bi bi-caret-down-fill dropdownicon"></i> -->
+        </a>
+    </nav>
+        <router-outlet>
+
+        </router-outlet>
+      <!-- <div class="text">Dashboard Sidebar Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corrupti, nobis numquam perspiciatis laboriosam officiis amet consectetur eius unde sit, tenetur labore praesentium libero illum ex incidunt quasi obcaecati voluptates.</div> -->
+  </section>
+</div>

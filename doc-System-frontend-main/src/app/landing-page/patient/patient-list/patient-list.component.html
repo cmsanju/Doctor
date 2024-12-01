@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="container-fluid heading mt-4">
+    <h1>Patient List</h1>
+    <button routerLink="/landing-page/create-patient" class="btn btn-primary myBtn">
+      Add Patient
+    </button>
+  </div>
+  
+  <div class="UserList">
+    <div class="card userCard" *ngFor="let user of patients; let i=index">
+      <div class="card-body">
+        <h5 class="card-title textOver">{{user.patientName}}</h5>
+        <hr>
+        <p class="card-text docInfo"><i class="iconColor bi bi-geo-alt-fill"></i> {{ user.address}}</p>
+        <p class="card-text docInfo"><i class="iconColor bi bi-telephone-fill"></i> {{ user.mobileNo }}</p>
+        <p class="card-text docInfo"><i class="iconColor bi bi-at"></i> {{ user.email }}</p>
+        <p class="card-text docInfo"><i class="iconColor bi bi-droplet-fill"></i> {{ user.bloodGroup | uppercase}}</p>
+        <p class="card-text docInfo"><i class="iconColor bi bi-gender-ambiguous"></i> {{ user.gender}}</p>
+        <div class="optionsL">
+          <p class="cLink" (click) = "updatePatient(user.patientId)">Update</p>
+          <p class="cLink" (click) = "deletePatient(user.patientId)"*ngIf="isadmin">Delete</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

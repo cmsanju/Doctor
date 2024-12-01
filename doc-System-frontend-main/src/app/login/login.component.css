@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* Main body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #d8f0fb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Box Area */
+.box-area {
+    width: 930px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Left Box */
+.left-box {
+    padding: 20px;
+    background: #949cce;
+    color: white;
+    text-align: center;
+}
+
+.left-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.left-box p {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.left-box small {
+    font-size: 15px;
+    width: 100%;
+    display: block;
+}
+
+/* Right Box */
+.right-box {
+    padding: 40px 30px;
+}
+
+.header-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    background: #f8f8f8;
+}
+
+.is-invalid {
+    border-color: #e74c3c;
+    background: #fee;
+}
+
+::placeholder {
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Login Button */
+.btn-primary {
+    background: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #45a049; /* Darker green */
+}
+
+/* Register Link Styling */
+.register-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #007bff; /* Blue link color */
+    margin-left: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+
+.btextual {
+    background: #007bff;
+    color: white;
+}
+
+.btextual:hover {
+    background: #0056b3;
+}
+
+/* Form Check (Remember Me) */
+.form-check-label {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.forgot a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
+    }
+
+    .left-box {
+        height: 150px;
+        overflow: hidden;
+    }
+
+    .left-box img {
+        margin-top: 125px;
+    }
+
+    .right-box {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,120 @@
+<div class="col-md-6 offset-md-3" style="margin-bottom: 100px;">
+  <h3 class="text-center">Create Appointment</h3>
+  <form #appointmentForm="ngForm" (ngSubmit)="saveAppointment()">
+
+    <!-- Appointment Id -->
+    <!-- <div class="form-group">
+      <label>Appointment Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="appointmentId"
+        [(ngModel)]="appointment.appointmentId"
+        name="appointmentId"
+        required
+        #appointmentId="ngModel"
+        [class.is-invalid]="appointmentId.invalid && appointmentId.touched"
+      />
+      <small class="text-danger" *ngIf="appointmentId.invalid && appointmentId.touched">
+        Appointment Id is required.
+      </small>
+    </div> -->
+
+    <!-- Patient Id -->
+    <div class="form-group">
+      <label>Patient Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="patientId"
+        [(ngModel)]="appointment.patient.patientId"
+        name="patientId"
+        required
+        #patientId="ngModel"
+        [class.is-invalid]="patientId.invalid && patientId.touched"
+      />
+      <small class="text-danger" *ngIf="patientId.invalid && patientId.touched">
+        Patient Id is required.
+      </small>
+    </div>
+
+    <!-- Doctor Id -->
+    <div class="form-group">
+      <label>Doctor Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="doctorId"
+        [(ngModel)]="appointment.doctor.doctorId"
+        name="doctorId"
+        required
+        #doctorId="ngModel"
+        [class.is-invalid]="doctorId.invalid && doctorId.touched"
+      />
+      <small class="text-danger" *ngIf="doctorId.invalid && doctorId.touched">
+        Doctor Id is required.
+      </small>
+    </div>
+
+    <!-- Appointment Date -->
+    <div class="form-group">
+      <label>Appointment Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="appointmentDate"
+        [(ngModel)]="appointment.appointmentDate"
+        name="appointmentDate"
+        required
+        #appointmentDate="ngModel"
+        [class.is-invalid]="appointmentDate.invalid && appointmentDate.touched"
+      />
+      <small class="text-danger" *ngIf="appointmentDate.invalid && appointmentDate.touched">
+        Appointment Date is required.
+      </small>
+    </div>
+
+    <!-- Appointment Status -->
+    <div class="form-group">
+      <label>Appointment Status</label>
+      <input
+        type="text"
+        class="form-control"
+        id="appointmentStatus"
+        [(ngModel)]="appointment.appointmentStatus"
+        name="appointmentStatus"
+        required
+        #appointmentStatus="ngModel"
+        [class.is-invalid]="appointmentStatus.invalid && appointmentStatus.touched"
+      />
+      <small class="text-danger" *ngIf="appointmentStatus.invalid && appointmentStatus.touched">
+        Appointment Status is required.
+      </small>
+    </div>
+
+    <!-- Remark -->
+    <div class="form-group">
+      <label>Remark</label>
+      <input
+        type="text"
+        class="form-control"
+        id="remark"
+        [(ngModel)]="appointment.remark"
+        name="remark"
+        #remark="ngModel"
+        [class.is-invalid]="remark.invalid && remark.touched"
+      />
+      <small class="text-danger" *ngIf="remark.invalid && remark.touched">
+        Remark cannot be empty.
+      </small>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button class="btn btn-success" type="submit" [disabled]="appointmentForm.invalid">
+        Submit
+      </button>
+    </div>
+    
+  </form>
+</div>

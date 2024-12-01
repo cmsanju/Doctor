@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <h1 class="text-center"><u>Feedback List</u></h1>
+  </div>
+
+  <button routerLink="/landing-page/create-feedback" class="btn btn-primary mb-4" *ngIf="ispatient">
+    Add Feedback
+  </button>
+
+  <div *ngFor="let feedback of feedbacks" class="feedback-card mb-4">
+    <div class="feedback-header d-flex justify-content-between">
+      <div class="doctor-info">
+        <h5 class="feedback-title">Dr. {{ feedback.doctor.doctorName }} (ID: {{ feedback.doctor.doctorId }})</h5>
+      </div>
+      <div class="patient-info text-right">
+        <p class="feedback-patient-name">Patient: {{ feedback.patient.patientName }} (ID: {{ feedback.patient.patientId }})</p>
+      </div>
+    </div>
+
+    <div class="feedback-body">
+      <div class="feedback-rating">
+        <span *ngFor="let star of [].constructor(feedback.rating); let i = index" class="star">&#9733;</span>
+        <span *ngFor="let star of [].constructor(5 - feedback.rating); let i = index" class="star empty">&#9733;</span>
+      </div>
+
+      <p class="feedback-comment">
+        <strong>Comment:</strong> {{ feedback.feedbackComment }}
+      </p>
+    </div>
+
+    <div class="feedback-actions">
+      <button (click)="updateFeedback(feedback.feedbackId)" class="btn btn-info" *ngIf="ispatient||isadmin">Update</button>
+      <button (click)="deleteFeedback(feedback.feedbackId)" class="btn btn-danger ml-2" *ngIf="isadmin">Delete</button>
+    </div>
+  </div>
+</div>

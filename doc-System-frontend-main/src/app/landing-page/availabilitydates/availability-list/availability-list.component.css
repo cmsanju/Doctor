@@ -1,0 +1,121 @@
+/* Container Styling */
+.container {
+    margin-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Button Styling */
+  button.btn.btn-primary {
+    margin-left: auto;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover Effect for Add Button */
+  button.btn.btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* List Container Styling */
+  .list-container {
+    margin-top: 30px;
+  }
+  
+  /* Individual List Item */
+  .list-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Effect for List Item */
+  .list-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Item Info Styling */
+  .item-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 1rem;
+    color: #555;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .item-info span {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  
+  /* Item Actions Styling */
+  .item-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  /* Button Styling for Update and Delete */
+  button.btn.btn-info, button.btn.btn-danger {
+    font-size: 0.875rem;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effect for Update Button */
+  button.btn.btn-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  /* Hover Effect for Delete Button */
+  button.btn.btn-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  /* Add Responsiveness */
+  @media (max-width: 768px) {
+    .list-item {
+      flex-direction: column;
+    }
+  
+    .item-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .item-actions {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+  }
+  

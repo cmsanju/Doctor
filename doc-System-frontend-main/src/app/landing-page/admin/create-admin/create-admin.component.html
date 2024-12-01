@@ -1,0 +1,51 @@
+<div class="col-md-6 offset-md-3" style="margin-bottom: 100px;">
+  <hr><br>
+  <h3 class="text-center"><u>Create Admin</u></h3>
+  <form #adminForm="ngForm" (ngSubmit)="saveAdmin()">
+
+    <div class="form-group">
+      <label>Admin Id</label>
+      <input type="text" class="form-control" id="adminId" name="adminId" [(ngModel)]="admin.adminId" required>
+      <small *ngIf="adminForm.form.controls['adminId']?.invalid && adminForm.form.controls['adminId']?.touched" class="text-danger">
+        Admin Id is required.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Admin Name</label>
+      <input type="text" class="form-control" id="adminName" name="adminName" [(ngModel)]="admin.adminName" required>
+      <small *ngIf="adminForm.form.controls['adminName']?.invalid && adminForm.form.controls['adminName']?.touched" class="text-danger">
+        Admin Name is required.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Contact No</label>
+      <input type="text" class="form-control" id="contactNumber" name="contactNumber" [(ngModel)]="admin.contactNumber" required pattern="^[0-9]{10}$">
+      <small *ngIf="adminForm.form.controls['contactNumber']?.invalid && adminForm.form.controls['contactNumber']?.touched" class="text-danger">
+        Contact number must be a valid 10-digit number.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="admin.email" required>
+      <small *ngIf="adminForm.form.controls['email']?.invalid && adminForm.form.controls['email']?.touched" class="text-danger">
+        Please enter a valid email address.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="admin.password" required minlength="8">
+      <small *ngIf="adminForm.form.controls['password']?.invalid && adminForm.form.controls['password']?.touched" class="text-danger">
+        Password must be at least 8 characters long.
+      </small>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-success" type="submit" [disabled]="adminForm.invalid">Submit</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,138 @@
+/* Container */
+.container {
+    padding-top: 50px; /* Adjusted for spacing */
+    max-width: 1200px;
+  }
+  
+  /* Header Styling */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+  
+  .feedback-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .feedback-patient-name {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  /* Feedback Card */
+  .feedback-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feedback-body {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  /* Rating Styling */
+  .feedback-rating {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-top: 10px;
+  }
+  
+  .star {
+    color: #ffcc00;
+  }
+  
+  .star.empty {
+    color: #dcdcdc;
+  }
+  
+  .feedback-comment {
+    font-size: 1rem;
+    margin-top: 15px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Action buttons */
+  .feedback-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .feedback-actions .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  /* Add Feedback Button */
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Button hover effects */
+  .btn-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  .btn-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  /* Feedback header layout adjustments */
+  .feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .doctor-info {
+    text-align: left;
+  }
+  
+  .patient-info {
+    text-align: right;
+  }
+  
+  /* For responsive view */
+  @media (max-width: 767px) {
+    .feedback-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .patient-info {
+      margin-top: 10px;
+    }
+  }
+  

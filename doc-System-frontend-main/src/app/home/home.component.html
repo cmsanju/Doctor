@@ -1,0 +1,143 @@
+<div id="top" class="body">
+    <header class="header" data-header>
+      <div class="cont">
+        <div class="LogoTextDiv">
+          <a href="#" class="logo" style="border-radius: 10px; overflow: hidden; margin-right: 1vw;">
+            <img src="../../assets/Logo.png" width="55" alt="logo">
+          </a>
+          <div class="logo-text">
+            <p class="unity-talk">MediTalk</p>
+          </div>
+        </div>
+  
+        <nav class="navbar" data-navbar>
+          <div class="wrapper">
+            <a href="#" class="logo" style="display: flex; gap: 10px; align-items: center; font-size: 24px;">
+              <img src="../../assets/Logo.png" width="40" height="50" alt="MediTalk logo">MediTalk
+            </a>
+            <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+              <i class="bi bi-arrow-bar-left" aria-hidden="true"></i>
+            </button>
+          </div>
+  
+          <ul class="navbar-list">
+            <li class="navbar-item"><a href="#home" class="navbar-link" data-nav-link>Home</a></li>
+            <li class="navbar-item"><a href="#about" class="navbar-link" data-nav-link>About</a></li>
+            <li class="navbar-item"><a href="#courses" class="navbar-link" data-nav-link>Groups</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link" data-nav-link>Contact</a></li>
+          </ul>
+        </nav>
+  
+        <div class="header-actions">
+          <a routerLink="/login" class="btn has-before">
+            <span class="span">Login</span>
+            <i class="bi bi-arrow-right" aria-hidden="true" style="margin-top: 5px;"></i>
+          </a>
+          <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+            <i class="bi bi-layout-sidebar-inset" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+  
+    <main>
+      <article>
+  
+        <section class="section hero has-bg-image" id="home" aria-label="home"
+          style="background-image: url('../../assets/hero-bg.svg')">
+          <div class="cont">
+            <div class="hero-content">
+              <h1 class="h1 section-title">Transform your health, access<span class="span"> personalized care</span> effortlessly.</h1>
+              <p class="hero-text">Trusted providers, seamless booking: Your health journey starts here.</p>
+              <a [routerLink]="['/registration']" class="btn has-before">
+                <span class="span">Get Started</span>
+                <i class="bi bi-arrow-right" aria-hidden="true" style="margin-top: 5px;"></i>
+              </a>
+            </div>
+  
+            <figure class="hero-banner">
+              <div class="img-holder one" style="--width: 270; --height: 300;">
+                <img src="../../assets/3d-header-Image1.png" width="270" height="300" alt="hero banner" class="img-cover">
+              </div>
+              <div class="img-holder two" style="--width: 240; --height: 370;">
+                <img src="../../assets/3d-header-Image2.png" width="240" height="370" alt="hero banner" class="img-cover">
+              </div>
+              <img src="../../assets/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+            </figure>
+          </div>
+        </section>
+  
+        <section class="section category" aria-label="category">
+          <div class="cont">
+            <p class="section-subtitle">Categories</p>
+            <h2 class="h2 section-title">Find <span class="span">Care</span> When You Need It.</h2>
+            <p class="section-text">Book appointments easily with just a few clicks.</p>
+  
+            <ul class="grid-list">
+              <li>
+                <div class="category-card" style="--color: 170, 75%, 41%">
+                  <div class="card-icon">
+                    <img src="../../assets/date-icon.png" width="60" height="70" loading="lazy" alt="Online Degree Programs" class="img">
+                  </div>
+                  <h3 class="h3"><a href="#" class="card-title">Online Appointment Booking</a></h3>
+                  <p class="card-text">Book appointments with real-time availability and instant confirmation.</p>
+                </div>
+              </li>
+  
+              <li>
+                  <div class="category-card" style="--color: 351, 83%, 61%">
+                    <div class="card-icon">
+                      <img src="../../assets/doctor-3d.png" width="80" height="90"  loading="lazy"
+                        alt="Non-Degree Programs" class="img">
+                    </div>
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Doctor Profiles</a>
+                    </h3>
+                    <p class="card-text">
+                      View doctor details and specializations to choose the right provider.
+                    </p>
+                  </div>
+              </li>
+              <li>
+                  <div class="category-card" style="--color: 229, 75%, 58%">
+                    <div class="card-icon">
+                      <img src="../../assets/nifification-icon.png" width="70" height="40" loading="lazy"
+                        alt="Off-Campus Programs" class="img">
+                    </div>
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Reminders</a>
+                    </h3>
+                    <p class="card-text">
+                      Get automatic SMS, email, or app reminders for your appointments.
+                    </p>
+                  </div>
+                </li>
+                
+  
+                <li>
+                  <div class="category-card" style="--color: 42, 94%, 55%">
+    
+                    <div class="card-icon">
+                      <img src="../../assets/hospital_location.png" width="70" height="60" loading="lazy"
+                        alt="Hybrid Distance Programs" class="img">
+                    </div>
+    
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Find Doctors Near You</a>
+                    </h3>
+    
+                    <p class="card-text">
+                      Search for doctors based on your location, with an interactive map to find nearby clinics or hospitals.
+                    </p>
+    
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </section>
+  
+      </article>
+    </main>
+  
+    

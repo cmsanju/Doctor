@@ -1,0 +1,108 @@
+<div class="col-md-6 offset-md-3 " style="margin-bottom: 100px;">
+  <h3 class="text-center"><u>Create Feedback</u></h3>
+  <form #feedbackForm="ngForm" (ngSubmit)="saveFeedback()">
+
+    <!-- Feedback Id -->
+    <!-- <div class="form-group">
+      <label>Feedback Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="feedbackId"
+        [(ngModel)]="feedback.feedbackId"
+        name="feedbackId"
+        required
+        #feedbackId="ngModel"
+        [class.is-invalid]="feedbackId.invalid && feedbackId.touched"
+      />
+      <small class="text-danger" *ngIf="feedbackId.invalid && feedbackId.touched">
+        Feedback Id is required.
+      </small>
+    </div> -->
+
+    <!-- Rating -->
+    <div class="form-group">
+      <label>Rating</label>
+      <input
+        type="number"
+        class="form-control"
+        id="rating"
+        [(ngModel)]="feedback.rating"
+        name="rating"
+        required
+        min="1"
+        max="5"
+        #rating="ngModel"
+        [class.is-invalid]="rating.invalid && rating.touched"
+      />
+      <small class="text-danger" *ngIf="rating.invalid && rating.touched">
+        Rating is required (1-5).
+      </small>
+    </div>
+
+    <!-- Patient Id -->
+    <div class="form-group">
+      <label>Patient Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="patientId"
+        [(ngModel)]="feedback.patient.patientId"
+        name="patientId"
+        required
+        #patientId="ngModel"
+        [class.is-invalid]="patientId.invalid && patientId.touched"
+      />
+      <small class="text-danger" *ngIf="patientId.invalid && patientId.touched">
+        Patient Id is required.
+      </small>
+    </div>
+
+    <!-- Doctor Id -->
+    <div class="form-group">
+      <label>Doctor Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="doctorId"
+        [(ngModel)]="feedback.doctor.doctorId"
+        name="doctorId"
+        required
+        #doctorId="ngModel"
+        [class.is-invalid]="doctorId.invalid && doctorId.touched"
+      />
+      <small class="text-danger" *ngIf="doctorId.invalid && doctorId.touched">
+        Doctor Id is required.
+      </small>
+    </div>
+
+    <!-- Feedback Comment -->
+    <div class="form-group">
+      <label>Feedback Comment</label>
+      <input
+        type="text"
+        class="form-control"
+        id="feedbackComment"
+        [(ngModel)]="feedback.feedbackComment"
+        name="feedbackComment"
+        required
+        #feedbackComment="ngModel"
+        [class.is-invalid]="feedbackComment.invalid && feedbackComment.touched"
+      />
+      <small class="text-danger" *ngIf="feedbackComment.invalid && feedbackComment.touched">
+        Feedback Comment is required.
+      </small>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="feedbackForm.invalid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

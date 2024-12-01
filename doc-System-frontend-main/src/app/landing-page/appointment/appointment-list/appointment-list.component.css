@@ -1,0 +1,105 @@
+.container {
+    max-width: 1200px;
+    padding-top: 50px; /* Moves elements down */
+  }
+  
+  .appointment-list-title {
+    font-size: 2.2rem; /* Slightly larger title font size */
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .add-appointment-btn {
+    font-size: 1rem;
+    padding: 10px 20px; /* Increased padding for button */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .add-appointment-btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    transform: scale(1.05);
+  }
+  
+  /* Appointment Card Styling */
+  .appointment-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px; /* Increased padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .appointment-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Appointment Fields Styling */
+  .appointment-field {
+    flex: 1;
+    font-size: 1rem; /* Slightly larger font size for list items */
+    color: #444;
+    text-align: left; /* Aligns content to the left */
+    padding: 0 15px; /* Adds horizontal spacing */
+    display: flex; /* Enables inline alignment */
+    align-items: center; /* Vertically centers the text */
+  }
+  
+  .appointment-field strong {
+    margin-right: 5px; /* Adds spacing between label and value */
+    font-weight: 600;
+    color: #333;
+  }
+  
+  
+  /* Actions Buttons */
+  .appointment-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .appointment-actions .btn {
+    font-size: 0.95rem; /* Slightly larger font size for buttons */
+    padding: 8px 16px; /* Increased padding for buttons */
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .appointment-actions .btn-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  .appointment-actions .btn-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .appointment-card {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .appointment-field {
+      text-align: left;
+      flex: 100%;
+      padding: 5px 0;
+    }
+  
+    .appointment-actions {
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+  }

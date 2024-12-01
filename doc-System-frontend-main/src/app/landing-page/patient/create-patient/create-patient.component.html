@@ -1,0 +1,180 @@
+<div class="col-md-6 offset-md-3" style="margin-bottom: 100px;">
+  <h3 class="text-center"><u>Create Patient</u></h3>
+  <form #patientForm="ngForm" (ngSubmit)="saveUser()">
+
+    <!-- Patient Id -->
+    <div class="form-group">
+      <label>Patient Id</label>
+      <input
+        type="text"
+        class="form-control"
+        id="patientId"
+        [(ngModel)]="patient.patientId"
+        name="patientId"
+        required
+        #patientId="ngModel"
+        [class.is-invalid]="patientId.invalid && patientId.touched"
+      />
+      <small class="text-danger" *ngIf="patientId.invalid && patientId.touched">
+        Patient Id is required.
+      </small>
+    </div>
+
+    <!-- Patient Name -->
+    <div class="form-group">
+      <label>Patient Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="patientName"
+        [(ngModel)]="patient.patientName"
+        name="patientName"
+        required
+        #patientName="ngModel"
+        [class.is-invalid]="patientName.invalid && patientName.touched"
+      />
+      <small class="text-danger" *ngIf="patientName.invalid && patientName.touched">
+        Patient Name is required.
+      </small>
+    </div>
+
+    <!-- Mobile No -->
+    <div class="form-group">
+      <label>Mobile No</label>
+      <input
+        type="text"
+        class="form-control"
+        id="mobileNo"
+        [(ngModel)]="patient.mobileNo"
+        name="mobileNo"
+        required
+        pattern="^[0-9]{10}$"
+        #mobileNo="ngModel"
+        [class.is-invalid]="mobileNo.invalid && mobileNo.touched"
+      />
+      <small class="text-danger" *ngIf="mobileNo.invalid && mobileNo.touched">
+        Mobile No is required and must be 10 digits.
+      </small>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        [(ngModel)]="patient.email"
+        name="email"
+        required
+        #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <small class="text-danger" *ngIf="email.invalid && email.touched">
+        A valid Email is required.
+      </small>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        [(ngModel)]="patient.password"
+        name="password"
+        required
+        minlength="8"
+        #password="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small class="text-danger" *ngIf="password.errors?.required && password.touched">
+        Password is required.
+      </small>
+      <small class="text-danger" *ngIf="password.errors?.minlength && password.touched">
+        Password must be at least 8 characters long.
+      </small>
+    </div>
+
+    <!-- Blood Group -->
+    <div class="form-group">
+      <label>Blood Group</label>
+      <input
+        type="text"
+        class="form-control"
+        id="bloodGroup"
+        [(ngModel)]="patient.bloodGroup"
+        name="bloodGroup"
+        required
+        #bloodGroup="ngModel"
+        [class.is-invalid]="bloodGroup.invalid && bloodGroup.touched"
+      />
+      <small class="text-danger" *ngIf="bloodGroup.invalid && bloodGroup.touched">
+        Blood Group is required.
+      </small>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group">
+      <label>Gender</label>
+      <input
+        type="text"
+        class="form-control"
+        id="gender"
+        [(ngModel)]="patient.gender"
+        name="gender"
+        required
+        #gender="ngModel"
+        [class.is-invalid]="gender.invalid && gender.touched"
+      />
+      <small class="text-danger" *ngIf="gender.invalid && gender.touched">
+        Gender is required.
+      </small>
+    </div>
+
+    <!-- Age -->
+    <div class="form-group">
+      <label>Age</label>
+      <input
+        type="number"
+        class="form-control"
+        id="age"
+        [(ngModel)]="patient.age"
+        name="age"
+        required
+        #age="ngModel"
+        [class.is-invalid]="age.invalid && age.touched"
+      />
+      <small class="text-danger" *ngIf="age.invalid && age.touched">
+        Age is required.
+      </small>
+    </div>
+
+    <!-- Address -->
+    <div class="form-group">
+      <label>Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="address"
+        [(ngModel)]="patient.address"
+        name="address"
+        required
+        #address="ngModel"
+        [class.is-invalid]="address.invalid && address.touched"
+      />
+      <small class="text-danger" *ngIf="address.invalid && address.touched">
+        Address is required.
+      </small>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-center">
+      <button class="btn btn-success" type="submit" [disabled]="patientForm.invalid">
+        Submit
+      </button>
+    </div>
+
+  </form>
+</div>
