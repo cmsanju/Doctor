@@ -69,6 +69,9 @@ public class AppointmentService {
                     " scheduled for " + appointment.getAppointmentDate() +
                     ".\n\nPlease check your schedule for further details.";
             mailService.sendEmail(appointment.getDoctor().getEmail(), doctorSubject, doctorBody);
+            if (appointment.getPatient().getEmail() == null || appointment.getDoctor().getEmail() == null) {
+                System.out.println("Missing email for patient or doctor.");
+            }
         } catch (Exception e) {
             System.out.println("Error while sending email: " + e.getMessage());
             e.printStackTrace();

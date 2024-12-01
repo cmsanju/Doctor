@@ -19,13 +19,14 @@ export class CreateAppointmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveAppointment() {
+    this.appointmentService.createAppointment(this.appointment).subscribe(data => {
+        this.goToUserList();
+    }, error => {
+        console.log('Error:', error);
+    });
+}
 
-  saveAppointment(){
-    this.appointmentService.createAppointment(this.appointment).subscribe(data=>{
-      console.log(data);
-      this.goToUserList();
-    }, error => console.log(error));
-  }
 
   goToUserList(){
     this.router.navigate(['/landing-page/appointment-list']);

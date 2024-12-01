@@ -54,10 +54,6 @@ public class AppointmentController {
         }
     }
 
-
-
-
-
     @PutMapping("appointment")
     public ResponseEntity<?> update(@RequestBody Appointment appointment) {
         try {

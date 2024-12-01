@@ -112,9 +112,12 @@
 
     <!-- Submit Button -->
     <div class="text-center">
-      <button class="btn btn-success" type="submit" [disabled]="appointmentForm.invalid">
-        Update
+      <button class="btn btn-success" type="submit" [disabled]="appointmentForm.invalid || loading">
+        Confirm Appointment
       </button>
+      <div *ngIf="loading" class="text-center mt-2">
+        <small>Loading...</small>
+      </div>
     </div>
     
   </form>
