@@ -4,13 +4,16 @@ package com.crud.app.controller;
 import com.crud.app.model.Admin;
 import com.crud.app.model.Appointment;
 import com.crud.app.services.AppointmentService;
+import com.crud.app.services.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 import java.util.NoSuchElementException;
+import javax.mail.MessagingException;
 
 @RestController
 @CrossOrigin("*")
@@ -19,6 +22,9 @@ public class AppointmentController {
 
     @Autowired
     private AppointmentService appointmentService;
+
+    @Autowired
+    private MailService mailService;
 
     @GetMapping("appointment")
     public List<Appointment> list(){
@@ -38,22 +44,30 @@ public class AppointmentController {
     }
 
     @PostMapping("appointment")
-    public ResponseEntity<Appointment> add(@RequestBody Appointment appointment){
-        appointmentService.save(appointment);
-        return new ResponseEntity<Appointment>(appointment,HttpStatus.CREATED);
+    public ResponseEntity<?> add(@RequestBody Appointment appointment) {
+        try {
+            appointmentService.save(appointment); // Save and send email
+            return new ResponseEntity<>(appointment, HttpStatus.CREATED);
+        } catch (Exception e) { // Catch generic exceptions if no specific one is propagated
+            e.printStackTrace(); // Log the stack trace for debugging
+            return new ResponseEntity<>("Error occurred: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
+
+
+
 
 
     @PutMapping("appointment")
     public ResponseEntity<?> update(@RequestBody Appointment appointment) {
         try {
-            Appointment existAppointment = appointmentService.update(appointment);
-            appointmentService.save(appointment);
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (NoSuchElementException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            appointmentService.update(appointment);
+            return new ResponseEntity<>(appointment, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Error updating appointment: " + e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
+
 
     @DeleteMapping("appointment/{id}")
     public void delete(@PathVariable Integer id) {
