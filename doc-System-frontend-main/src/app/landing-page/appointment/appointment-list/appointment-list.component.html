@@ -28,7 +28,7 @@
         <strong>Remark:</strong> {{ appointment.remark }}
       </div>
       <div class="appointment-actions">
-        <button (click)="updateAppointment(appointment.appointmentId)" class="btn btn-info">Confirm Appointment</button>
+        <button (click)="updateAppointment(appointment.appointmentId)" class="btn btn-info">Update/Confirm</button>
         <button (click)="deleteAppointment(appointment.appointmentId)" class="btn btn-danger" *ngIf="isadmin">Delete</button>
       </div>
     </div>
